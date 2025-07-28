@@ -359,7 +359,7 @@ KeyModifierMask KeyMap::getCommandModifiers() const
   // we currently treat ctrl, alt, meta and super as command modifiers.
   // some platforms may have a more limited set (OS X only needs Alt)
   // but this works anyway.
-  return KeyModifierControl | KeyModifierAlt | KeyModifierAltGr | KeyModifierMeta | KeyModifierSuper;
+  return KeyModifierControl | KeyModifierAlt | KeyModifierMeta | KeyModifierSuper;
 }
 
 void KeyMap::collectButtons(const ModifierToKeys &mods, ButtonToKeyMap &keys)
@@ -696,7 +696,7 @@ bool KeyMap::keysForKeyItem(
     const std::string &lang
 ) const
 {
-  static const KeyModifierMask s_notRequiredMask = KeyModifierAltGr | KeyModifierNumLock | KeyModifierScrollLock;
+  static const KeyModifierMask s_notRequiredMask = KeyModifierNumLock | KeyModifierScrollLock;
 
   // add keystrokes to adjust the group
   if (group != keyItem.m_group) {

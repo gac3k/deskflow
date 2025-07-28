@@ -130,6 +130,8 @@ std::uint32_t EiKeyState::convertModMask(std::uint32_t xkb_mask) const
       barrier_mask |= (1 << kKeyModifierBitAlt);
     else if (strcmp(XKB_MOD_NAME_LOGO, name) == 0)
       barrier_mask |= (1 << kKeyModifierBitSuper);
+    else if (strcmp(XKB_VMOD_NAME_LEVEL3, name) == 0)
+      barrier_mask |= (1 << kKeyModifierBitAltGr);
   }
 
   return barrier_mask;
